@@ -55,8 +55,22 @@ h1, h2 {
   text-transform: uppercase;
 }
 
+/* Link ở phần nội dung chính (nền sáng) */
 a {
-  color: #0C4A6E;
+  color: #004D80;
+  text-decoration: underline;
+}
+
+/* Link trong menu header (nền xanh tối) - sửa lỗi WAVE contrast */
+nav a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #FFEB3B;
 }
 
 /* Grid styling for 2 columns (~40% each) */
