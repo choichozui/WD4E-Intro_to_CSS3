@@ -1,4 +1,54 @@
 body{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 150%;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #0b3c5d;
+  padding: 20px;
+}
+
+/* Bước 5: thẻ nav - màu nền */
+nav {
+  background-color: #1d2731;
+  padding: 10px;
+}
+
+/* Bước 6: thẻ main - màu nền và kích thước chữ */
+main {
+  background-color: #ffffff;
+  font-size: 18px;
+  padding: 20px;
+}
+
+/* Bước 7: thẻ footer - màu nền */
+footer {
+  background-color: #328cc1;
+  padding: 15px;
+}
+
+/* Bước 8: thẻ li - hiển thị và chiều rộng */
+li {
+  display: inline-block;
+  width: 120px;
+}
+
+/* Bước 9: thẻ h1 - căn lề, phông chữ và màu chữ */
+h1 {
+  text-align: center;
+  font-family: Georgia, serif;
+  color: #ffffff;
+}
+
+/* Bước 10: thẻ p - chiều cao dòng */
+p {
+  line-height: 1.6;
+  color: #212529;
+}
+
+/* Bổ sung chữ cho liên kết nav để vượt qua kiểm tra tương phản WAVE */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
 }
