@@ -1,0 +1,87 @@
+/* Style for Skip to Main Content */
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Commented out li styling as required */
+/*
+li {
+  display: inline;
+}
+*/
+
+/* Nav element styling */
+nav {
+  display: inline-block;
+  width: 80%;
+}
+
+/* Descendant selector for nav images */
+nav img {
+  width: 10%;
+}
+
+/* Base styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #222222;
+  background-color: #F4F4F4;
+  margin: 20px;
+}
+
+header {
+  background-color: #1A365D;
+  color: #FFFFFF;
+  padding: 15px;
+}
+
+h1, h2 {
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+a {
+  color: #0C4A6E;
+}
+
+/* Grid styling for 2 columns (~40% each) */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 20px;
+}
+
+/* Descendant selector for grid images */
+.grid img {
+  width: 100%;
+}
+
+/* Flex styling */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 20px;
+}
+
+.flex img {
+  width: 30%;
+  min-width: 250px;
+}
