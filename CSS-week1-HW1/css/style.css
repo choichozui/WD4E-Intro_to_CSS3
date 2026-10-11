@@ -11,15 +11,17 @@ header {
 
 /* Bước 5: thẻ nav - màu nền */
 nav {
-  background-color: #1d2731;
+  background-color: #ffffff;
   padding: 10px;
 }
 
-/* Ép tất cả liên kết trong nav luôn là màu trắng để hết lỗi WAVE */
+/* Các liên kết trong nav - chữ xanh đậm trên nền trắng (tương phản cực cao, 0 lỗi WAVE) */
 nav a,
+nav a:link,
 nav a:visited,
-nav a:link {
-  color: #ffffff;
+nav a:hover,
+nav a:active {
+  color: #0b3c5d !important;
   text-decoration: underline;
 }
 
