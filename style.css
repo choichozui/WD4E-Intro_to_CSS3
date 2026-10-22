@@ -1,30 +1,30 @@
 /* ==========================================================================
-   1. RESET & CẤU TRÚC CƠ BẢN (Box-Sizing, Font, Độ tương phản màu)
+   1. RESET & CẤU TRÚC CƠ BẢN
    ========================================================================== */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #faf7f2;
-  color: #2b2118;
+  background-color: #f7f5f0; /* Nền kem sáng */
+  color: #1a1a1a;            /* Chữ đen đậm - Tương phản cực cao */
 }
 
 /* ==========================================================================
-   2. TIÊU CHÍ: "SKIP TO MAIN CONTENT" (Position & :focus)
+   2. TIÊU CHÍ: SKIP TO MAIN CONTENT (:focus)
    ========================================================================== */
 .skip-link {
   position: absolute;
-  top: -80px;
+  top: -100px;
   left: 10px;
-  background-color: #2b2118;
+  background-color: #000000;
   color: #ffffff;
-  padding: 10px 16px;
+  padding: 10px 18px;
   text-decoration: underline;
   font-weight: bold;
   border-radius: 4px;
@@ -37,18 +37,19 @@ body {
 }
 
 /* ==========================================================================
-   3. TIÊU CHÍ: HEADER & ĐIỀU HƯỚNG NAV (Flexbox & hơn 3 thuộc tính CSS)
+   3. TIÊU CHÍ: HEADER & ĐIỀU HƯỚNG NAV (Flexbox & >3 thuộc tính CSS)
    ========================================================================== */
 header {
-  background-color: #3e2723;
+  background-color: #211510; /* Nền nâu đen rất tối */
   color: #ffffff;
-  padding: 20px 10px;
+  padding: 25px 15px;
   text-align: center;
 }
 
 header h1 {
   margin: 0 0 15px 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  color: #ffffff;            /* Chữ trắng tinh */
 }
 
 .nav-links {
@@ -63,26 +64,27 @@ header h1 {
 
 .nav-links a {
   display: inline-block;
-  color: #ffffff;
-  background-color: #5d4037;
-  padding: 8px 18px;
+  color: #ffffff;            /* Chữ trắng rõ ràng trên nút tối */
+  background-color: #422d25;
+  padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 20px;
+  border: 1px solid #ffffff;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* TIÊU CHÍ: Lớp giả :hover */
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #d7ccc8;
-  color: #2b2118;
+  background-color: #ffffff;
+  color: #000000;            /* Tương phản ngược tuyệt đối */
   transform: translateY(-3px);
 }
 
 .nav-links a.active {
-  background-color: #d7ccc8;
-  color: #2b2118;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* ==========================================================================
@@ -92,29 +94,41 @@ main {
   max-width: 1000px;
   margin: 30px auto;
   padding: 0 20px;
-  min-height: 550px;
+  min-height: 500px;
+}
+
+h2 {
+  color: #211510;
+}
+
+p {
+  color: #1a1a1a;
 }
 
 .intro-card {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   text-align: center;
 }
 
+.img-link {
+  display: inline-block;
+}
+
 /* ==========================================================================
-   5. TIÊU CHÍ: MÔ HÌNH HỘP (BOX MODEL) CHO HÌNH ẢNH
-      Bao gồm: border, padding, border-radius
+   5. TIÊU CHÍ: MÔ HÌNH HỘP (BOX MODEL) CHO TẤT CẢ HÌNH ẢNH
    ========================================================================== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
   box-sizing: border-box;
-  border: 4px solid #8d6e63;
-  padding: 6px;
-  border-radius: 12px;
+  border: 4px solid #5a3e36; /* Border */
+  padding: 6px;              /* Padding */
+  border-radius: 12px;       /* Border-radius */
   background-color: #ffffff;
 }
 
@@ -125,20 +139,20 @@ img {
 }
 
 /* ==========================================================================
-   6. TIÊU CHÍ: BỐ CỤC LƯỚI GRID (2 cột) trên trang menu.html
+   6. TIÊU CHÍ: BỐ CỤC LƯỚI GRID (2 cột) TRÊN TRANG MENU
    ========================================================================== */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .grid-item {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #e0d8cf;
+  border: 1px solid #dcdcdc;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -159,8 +173,13 @@ img {
   margin-bottom: 15px;
 }
 
+.grid-item h3 {
+  color: #211510;
+  margin: 10px 0;
+}
+
 /* ==========================================================================
-   7. TIÊU CHÍ: FLEXBOX & BỘ CHỌN :nth-child trên trang gallery.html
+   7. TIÊU CHÍ: FLEXBOX & BỘ CHỌN :nth-child TRÊN TRANG GALLERY
    ========================================================================== */
 .flex-gallery {
   display: flex;
@@ -176,6 +195,7 @@ img {
   background-color: #ffffff;
   padding: 15px;
   border-radius: 8px;
+  border: 1px solid #dcdcdc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   text-align: center;
   transition: transform 0.3s ease;
@@ -192,33 +212,37 @@ img {
   margin-bottom: 10px;
 }
 
-/* TIÊU CHÍ: BỘ CHỌN :nth-child để xen kẽ viền và bo góc ảnh */
+/* TIÊU CHÍ: nth-child xen kẽ góc bo viền cho các ảnh chẵn / lẻ */
 .gallery-card:nth-child(odd) img {
   border-radius: 35px 4px 35px 4px;
-  border-color: #a1887f;
+  border-color: #8c6239;
 }
 
 .gallery-card:nth-child(even) img {
   border-radius: 4px 35px 4px 35px;
-  border-color: #5d4037;
+  border-color: #3e2723;
 }
 
 /* ==========================================================================
-   8. CHÂN TRANG FOOTER
+   8. CHÂN TRANG FOOTER (Độ tương phản cao)
    ========================================================================== */
 footer {
-  background-color: #3e2723;
-  color: #ffffff;
+  background-color: #211510;
+  color: #ffffff;            /* Chữ trắng tinh */
   text-align: center;
-  padding: 20px 10px;
+  padding: 25px 15px;
   margin-top: 50px;
 }
 
 footer p {
   margin: 0;
+  color: #ffffff;            /* Chữ trắng tinh trên nền nâu tối */
   font-size: 0.95rem;
 }
 
+/* ==========================================================================
+   9. RESPONSIVE ĐIỆN THOẠI
+   ========================================================================== */
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;
