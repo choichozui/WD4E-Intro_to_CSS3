@@ -1,0 +1,229 @@
+/* ==========================================================================
+   1. RESET & CẤU TRÚC CƠ BẢN (Box-Sizing, Font, Độ tương phản màu)
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #faf7f2;
+  color: #2b2118;
+}
+
+/* ==========================================================================
+   2. TIÊU CHÍ: "SKIP TO MAIN CONTENT" (Position & :focus)
+   ========================================================================== */
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 10px;
+  background-color: #2b2118;
+  color: #ffffff;
+  padding: 10px 16px;
+  text-decoration: underline;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 9999;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* ==========================================================================
+   3. TIÊU CHÍ: HEADER & ĐIỀU HƯỚNG NAV (Flexbox & hơn 3 thuộc tính CSS)
+   ========================================================================== */
+header {
+  background-color: #3e2723;
+  color: #ffffff;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 15px 0;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.nav-links a {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #5d4037;
+  padding: 8px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* TIÊU CHÍ: Lớp giả :hover */
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #d7ccc8;
+  color: #2b2118;
+  transform: translateY(-3px);
+}
+
+.nav-links a.active {
+  background-color: #d7ccc8;
+  color: #2b2118;
+}
+
+/* ==========================================================================
+   4. NỘI DUNG CHÍNH (MAIN)
+   ========================================================================== */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  min-height: 550px;
+}
+
+.intro-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* ==========================================================================
+   5. TIÊU CHÍ: MÔ HÌNH HỘP (BOX MODEL) CHO HÌNH ẢNH
+      Bao gồm: border, padding, border-radius
+   ========================================================================== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  border: 4px solid #8d6e63;
+  padding: 6px;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.hero-img {
+  margin: 25px auto;
+  max-height: 380px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   6. TIÊU CHÍ: BỐ CỤC LƯỚI GRID (2 cột) trên trang menu.html
+   ========================================================================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0d8cf;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   7. TIÊU CHÍ: FLEXBOX & BỘ CHỌN :nth-child trên trang gallery.html
+   ========================================================================== */
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.gallery-card {
+  flex: 0 1 300px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: scale(1.03);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* TIÊU CHÍ: BỘ CHỌN :nth-child để xen kẽ viền và bo góc ảnh */
+.gallery-card:nth-child(odd) img {
+  border-radius: 35px 4px 35px 4px;
+  border-color: #a1887f;
+}
+
+.gallery-card:nth-child(even) img {
+  border-radius: 4px 35px 4px 35px;
+  border-color: #5d4037;
+}
+
+/* ==========================================================================
+   8. CHÂN TRANG FOOTER
+   ========================================================================== */
+footer {
+  background-color: #3e2723;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .gallery-card {
+    flex: 1 1 100%;
+  }
+}

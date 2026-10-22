@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bộ Sưu Tập Cà Phê - Flexbox & nth-child</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
+  <header>
+    <h1>Bộ Sưu Tập Không Gian & Hương Vị</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="menu.html">Thực Đơn (Grid)</a></li>
+        <li><a href="gallery.html" class="active">Bộ Sưu Tập (Flexbox)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h2>Khoảnh Khắc Cà Phê Đẹp</h2>
+    <p>Trang này gồm 6 hình ảnh bố trí theo Flexbox. Các hình ảnh được áp dụng hiệu ứng xen kẽ thông qua bộ chọn nâng cao nth-child.</p>
+
+    <!-- Khối Flexbox chứa 6 hình ảnh (thỏa mãn yêu cầu >= 5 ảnh) -->
+    <div class="flex-gallery">
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop&q=80" 
+             alt="Tách cà phê espresso vẽ bọt sữa latte art tinh xảo">
+        <p>Latte Art nghệ thuật</p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&auto=format&fit=crop&q=80" 
+             alt="Hạt cà phê nguyên chất rang nâu óng ánh">
+        <p>Hạt cà phê rang mộc</p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=500&auto=format&fit=crop&q=80" 
+             alt="Không gian quán cà phê ấm cúng nhiều ánh sáng">
+        <p>Không gian quán an yên</p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=500&auto=format&fit=crop&q=80" 
+             alt="Bình chiết xuất cà phê lạnh cold brew mát lạnh">
+        <p>Cold Brew thanh mát</p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?w=500&auto=format&fit=crop&q=80" 
+             alt="Cốc cà phê nóng bên cạnh cuốn sách mở trên bàn">
+        <p>Cà phê và sách</p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop&q=80" 
+             alt="Máy pha cà phê chuyên nghiệp đang chiết xuất dòng cà phê sánh mịn">
+        <p>Chiết xuất Espresso chuẩn</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Thế Giới Cà Phê. Dự án thiết kế web chuẩn Accessibility.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực Đơn Cà Phê - Bố Cục Grid</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
+  <header>
+    <h1>Thực Đơn Cà Phê Đặc Sản</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="menu.html" class="active">Thực Đơn (Grid)</a></li>
+        <li><a href="gallery.html">Bộ Sưu Tập (Flexbox)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h2>Các Món Cà Phê Nổi Bật</h2>
+    <p>Trang này sử dụng bố cục CSS Grid hai cột kết hợp mô hình hộp Box Model chuẩn chỉnh.</p>
+
+    <!-- Khối Grid 2 cột theo yêu cầu -->
+    <div class="grid-container">
+      <article class="grid-item">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80" 
+             alt="Ly cà phê sữa pha phin truyền thống thơm ngon">
+        <h3>Cà Phê Phin Sữa Đá</h3>
+        <p>Hạt Robusta nguyên chất pha phin truyền thống hòa quyện cùng sữa đặc béo ngậy và đá mát lạnh.</p>
+      </article>
+
+      <article class="grid-item">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=600&auto=format&fit=crop&q=80" 
+             alt="Cốc cà phê pha thủ công bằng phễu lọc">
+        <h3>Cà Phê Pha Thủ Công (Pour Over)</h3>
+        <p>Chiết xuất từ hạt Arabica rang sáng màu, mang đến hương vị thanh tao thoang thoảng mùi hoa quả tự nhiên.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Thế Giới Cà Phê. Dự án thiết kế web chuẩn Accessibility.</p>
+  </footer>
+</body>
+</html>
